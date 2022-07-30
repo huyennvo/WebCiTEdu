@@ -88,4 +88,6 @@ td {
         background-color: var(--bs-dropdown-link-hover-bg);
       }
 
- 
+    .gioiTinh {
+      width: 5vw !important;
+    }

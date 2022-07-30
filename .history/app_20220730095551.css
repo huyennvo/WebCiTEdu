@@ -27,6 +27,7 @@ td {
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
+
 }
 
 /* .btn-toggle[aria-expanded="true"] i{
@@ -87,5 +88,7 @@ td {
         color: var(--bs-dropdown-link-hover-color);
         background-color: var(--bs-dropdown-link-hover-bg);
       }
-
- 
+  .gioiTinh {
+    text-align: center;
+    width: 3px;
+  }

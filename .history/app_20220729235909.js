@@ -66,6 +66,7 @@ $(document).ready(function () {
     </button> </th>`;
     $("#row1").append(html1);
     for(let i = 0; i < 5; i++) {
+
       $(`#row${i + 2}`).append(`<td><input type="checkbox" id="checkBox${stt}" name="name" value="name">
       <select name="cars" id="cars" >
         <option value="saab" selected></option>
@@ -113,9 +114,12 @@ $(document).ready(function () {
  $('[data-toggle="tooltip"]').tooltip({
      trigger: 'hover'
  })
- $('.select-all').click(function () {
-  let sttt = $(this).attr("data-stt");
-  console.log(sttt);
+
+ stt++;
+});
+
+$('.select-all').click(function () {
+  const sttt = $(this).attr("data-stt");
   if ($(this).hasClass('allChecked')) {
     $(`input:checkbox[id^="checkBox${sttt}"][type="checkbox"]`).prop('checked', false);
   } else {
@@ -123,10 +127,6 @@ $(document).ready(function () {
   }
   $(this).toggleClass('allChecked'); 
 })
- stt++;
-});
-
-
-
+location.reload();
 
 });

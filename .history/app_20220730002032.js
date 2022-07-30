@@ -114,7 +114,7 @@ $(document).ready(function () {
      trigger: 'hover'
  })
  $('.select-all').click(function () {
-  let sttt = $(this).attr("data-stt");
+  const sttt = $(this).attr("data-stt");
   console.log(sttt);
   if ($(this).hasClass('allChecked')) {
     $(`input:checkbox[id^="checkBox${sttt}"][type="checkbox"]`).prop('checked', false);
