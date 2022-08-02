@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>CiT Edu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/1b99fd25e4.js" crossorigin="anonymous"></script>
+</head>
+
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="./sb-admin-2.min.css" rel="stylesheet">
+
+<!-- <link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+rel="stylesheet"
+integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+crossorigin="anonymous"
+/> -->
+<!-- <script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+crossorigin="anonymous"
+></script>  -->
+<script src="./app.js"></script>
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="index.html"> -->
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Interface
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-cog"></i>
+          <span>Components</span>
+        </a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Addons
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
+          aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Pages</span>
+        </a>
+      </li>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="charts.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Charts</span></a>
+      </li>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item active">
+        <a class="nav-link" href="tables.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Tables</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <form class="form-inline">
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+          </form>
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </nav>
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead style="text-align: center;">
+                  <tr id="row1">
+                    <th colspan="5">Học viên</th>
+                      <th rowspan="2">Buổi 1 <button style="border: 0; background-color: #F8F9FC" id="select-all1"><i
+                            class="fa-solid fa-check-double" style="color:green;"  data-toggle="tooltip" data-placement="right" title="Chọn tất cả"></i></button><br><button type="button"
+                        class="btn" data-toggle="modal" data-target="#exampleModal">
+                        Thêm
+                      </button></th>
+
+                    <th rowspan="2">Buổi 2<button style="border: 0; background-color: #F8F9FC" id="select-all2"><i
+                      class="fa-solid fa-check-double" style="color: green;" data-toggle="tooltip" data-placement="right" title="Chọn tất cả"></i></button> <br><button type="button" class="btn"
+                        data-toggle="modal" data-target="#exampleModal">
+                        Thêm
+                      </button></th>
+                      <th rowspan="2">Buổi 3 <button style="border: 0; background-color: #F8F9FC" id="select-all3" data-toggle="tooltip" data-placement="right" title="Chọn tất cả"><i
+                        class="fa-solid fa-check-double" style="color:green;" ></i></button><br><button type="button"
+                    class="btn" data-toggle="modal" data-target="#exampleModal">
+                    Thêm
+                  </button></th>
+
+                <th rowspan="2">Buổi 4<button style="border: 0; background-color: #F8F9FC" id="select-all4"><i
+                  class="fa-solid fa-check-double" style="color: green;" data-toggle="tooltip" data-placement="right" title="Chọn tất cả"></i></button> <br><button type="button" class="btn"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Thêm
+                  </button></th>
+                  <th rowspan="2">Thêm buổi</th>
+                  </tr>
+                  <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th>SĐT</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+
+
+                  <tr id="row2">
+                    <td>1</td>
+                    <td>Edinburgh</td>
+                    <td>03432425</td>
+                    <td>17/02/2002</td>
+                    <td>Nam</td>
+                    <td><input type="checkbox" id="checkBox1" name="name" value="name">
+                      <select name="cars" id="cars" >
+                        <option value="saab" selected></option>
+                          <option value="saab" >Có phép</option>
+                          <option value="opel">Không phép</option>
+                          <option value="audi">Đi muộn</option>
+                        </select>
+                    </td>
+                    <td><input type="checkbox" id="checkBox2" name="name" value="name">
+                      <select name="cars" id="cars" >
+                        <option value="saab" selected></option>
+                          <option value="saab" >Có phép</option>
+                          <option value="opel">Không phép</option>
+                          <option value="audi">Đi muộn</option>
+                        </select></td>
+                    <td><input type="checkbox" id="checkBox3" name="name" value="name">
+                      <select name="cars" id="cars" >
+                        <option value="saab" selected></option>
+                          <option value="saab" >Có phép</option>
+                          <option value="opel">Không phép</option>
+                          <option value="audi">Đi muộn</option>
+                        </select></td>
+                    <td><input type="checkbox" id="checkBox4" name="name" value="name">
+                      <select name="cars" id="cars" >
+                        <option value="saab" selected></option>
+                          <option value="saab" >Có phép</option>
+                          <option value="opel">Không phép</option>
+                          <option value="audi">Đi muộn</option>
+                        </select></td>
+
+                  </tr>
+                  <tr id="row3">
+                    <td>1</td>
+                    <td>Edinburgh</td>
+                    <td>03432425</td>
+                    <td>17/02/2002</td>
+                    <td>Nam</td>
+                    <td>
+                      <input type="checkbox" id="checkBox1" name="name" value="name">
+              
+                    </td>
+                    <td><input type="checkbox" id="checkBox2" name="name" value="name"></td>
+                    <td><input type="checkbox" id="checkBox3" name="name" value="name"></td>
+                    <td><input type="checkbox" id="checkBox4" name="name" value="name"></td>
+                  </tr>
+                  <tr id="row4">
+                    <td>1</td>
+                    <td>Edinburgh</td>
+                    <td>03432425</td>
+                    <td>17/02/2002</td>
+                    <td>Nam</td>
+                    <td><input type="checkbox" id="checkBox1" name="name" value="name"></td>
+                    <td><input type="checkbox" id="checkBox2" name="name" value="name"></td>
+                    <td><input type="checkbox" id="checkBox3" name="name" value="name"></td>
+                    <td><input type="checkbox" id="checkBox4" name="name" value="name"></td>
+                  </tr>
+                  <tr id="row5">
+                    <td>1</td>
+                    <td>Edinburgh</td>
+                    <td>03432425</td>
+                    <td>17/02/2002</td>
+                    <td>Nam</td>
+                    <td><input type="checkbox" id="checkBox1" name="name" value="name"></td>
+                    <td><input type="checkbox" id="checkBox2" name="name" value="name"></td>
+                    <td><input type="checkbox" id="checkBox3" name="name" value="name"></td>
+                    <td><input type="checkbox" id="checkBox4" name="name" value="name"></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container-fluid -->
+    </div>
+    <!-- End of Main Content -->
+
+  </div>
+  <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <!-- Button trigger modal -->
+
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Thông tin buổi học</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formInput-add">
+            <div class="form-group row">
+              <label class="col-md-3" for="inputName">Chủ nhiệm</label>
+              <input type="text" class="col-md-9 form-control" id="inputName" name="name" aria-describedby="emailHelp"
+                placeholder="Tên chủ nhiệm" />
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3" for="inputPrice">Trợ giảng</label>
+              <input type="" name="price" class="col-md-9 form-control" id="inputPrice" placeholder="Tên trợ giảng" />
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3" for="inputDescription">Giảng viên</label>
+              <input type="" name="description" class="col-md-9 form-control" id="inputDescription"
+                placeholder="Tên giảng viên" />
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3" for="inputQuantity">Nội dung buổi học</label>
+
+              <input type="" name="product_site" class="col-md-9 form-control" id="inputProductSite" placeholder="" />
+              <!-- <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea> -->
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3" for="inputProductSite">Nhận xét</label>
+              <textarea type="" name="quantity" class="col-md-9 form-control" id="inputQuantity"
+                placeholder=""></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Lưu</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
