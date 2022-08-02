@@ -156,8 +156,9 @@ $(document).ready(function () {
     //   // $(".addNewInfo").prop("hidden", "true");
     // })
     $("#exampleModal").on('click', ".saveNewInfo", function(){
-      $(".addNewInfo").hide(); 
-      $('#btnClose-add').click();
+      alert("hi")
+      let sttt = $(this).attr("data-stt");
+      alert(sttt);
       
   });
 

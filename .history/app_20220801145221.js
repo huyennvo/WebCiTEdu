@@ -155,10 +155,9 @@ $(document).ready(function () {
       
     //   // $(".addNewInfo").prop("hidden", "true");
     // })
-    $("#exampleModal").on('click', ".saveNewInfo", function(){
-      $(".addNewInfo").hide(); 
-      $('#btnClose-add').click();
-      
+    $(".addNewInfo").on('click', ".btn.btn-primary.addNewInfo", function(){
+      let sttt = $(this).attr("data-stt");
+      alert(sttt);
   });
 
 })

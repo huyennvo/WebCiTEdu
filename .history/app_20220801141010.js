@@ -39,7 +39,7 @@ $(document).ready(function () {
     max++;
     html1 += `<th>Buổi ${stt} <button style="border: 0; background-color: #F8F9FC" data-stt="${stt}" class="checkBox${stt} select-all"><i
     class="fa-solid fa-check-double" style="color:green;"  data-toggle="tooltip" data-placement="right" title="Chọn tất cả"></i></button><br><button type="button"
-    class="btn addNewInfo" data-toggle="modal" data-stt="${stt}" data-target="#exampleModal">
+    class="btn addNewInfo ${stt}" data-toggle="modal" data-stt="${stt}" data-target="#exampleModal">
     Thêm
     </button>  <button class="pull-right btn btn-default btn-condensed hide-column" data-toggle="tooltip" data-placement="bottom" title="Hide Column">
     <i class="fa fa-eye-slash"></i>  
@@ -148,18 +148,13 @@ $(document).ready(function () {
       $(this).toggleClass("allChecked");
     });
     stt++;
-    // $(".btn.btn-primary.addNewInfo").click(function (){
-    //    let sttt = $(this).attr("data-stt");
-    //    alert(sttt)
-    //    $().hide(); 
+    $(".btn.btn-primary.addNewInfo").click(function (){
+      // let sttt = $(this).attr("data-stt");
+      $(".addNewInfo").hide();
       
-    //   // $(".addNewInfo").prop("hidden", "true");
-    // })
-    $("#exampleModal").on('click', ".saveNewInfo", function(){
-      $(".addNewInfo").hide(); 
-      $('#btnClose-add').click();
-      
+      // $(".addNewInfo").prop("hidden", "true");
+    })
   });
 
-})
+  $()
 });

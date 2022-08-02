@@ -156,8 +156,8 @@ $(document).ready(function () {
     //   // $(".addNewInfo").prop("hidden", "true");
     // })
     $("#exampleModal").on('click', ".saveNewInfo", function(){
+      alert("hi")
       $(".addNewInfo").hide(); 
-      $('#btnClose-add').click();
       
   });
 

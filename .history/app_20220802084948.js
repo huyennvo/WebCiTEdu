@@ -39,7 +39,7 @@ $(document).ready(function () {
     max++;
     html1 += `<th>Buổi ${stt} <button style="border: 0; background-color: #F8F9FC" data-stt="${stt}" class="checkBox${stt} select-all"><i
     class="fa-solid fa-check-double" style="color:green;"  data-toggle="tooltip" data-placement="right" title="Chọn tất cả"></i></button><br><button type="button"
-    class="btn addNewInfo" data-toggle="modal" data-stt="${stt}" data-target="#exampleModal">
+    class="btn addNewInfo"  data-stt="${stt}" >
     Thêm
     </button>  <button class="pull-right btn btn-default btn-condensed hide-column" data-toggle="tooltip" data-placement="bottom" title="Hide Column">
     <i class="fa fa-eye-slash"></i>  
